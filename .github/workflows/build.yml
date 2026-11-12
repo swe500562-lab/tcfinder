@@ -15,7 +15,8 @@ jobs:
         with:
           gradle-version: "9.2.0"
       - run: gradle build --no-daemon
+        working-directory: tcfinder
       - uses: actions/upload-artifact@v4
         with:
           name: tcfinder-mod
-          path: build/libs/*.jar
+          path: tcfinder/build/libs/*.jar
